@@ -1,9 +1,6 @@
-# Anything-British
-Project exploring the connection between musical talent and national origin. 
-
 <p float="left">
-    <img src="images/1200px-Flag_of_the_United_Kingdom.png" width="460" height="400"/>
-    <img src="images/led-zeppelin.jpeg" width="330" height="370"/>
+    <img src="images/1200px-Flag_of_the_United_Kingdom.png" width="400" height="300"/>
+    <img src="images/led-zeppelin.jpeg" width="400" height="300"/>
 </p>
 
 
@@ -28,11 +25,11 @@ Data Science is fundamentally about finding signals in the noise. Those signals 
 Although this project was not designed to solve a specific business problem, the concepts can be applied to a spectrum of investment decisions where understanding a market segment is critical for success. For example, a thesis tailored for the music industry:
 
 >***If launching a new record label, is it possible to mitigate risk by focusing in certain geographic regions, i.e. - do some countries have an ecosystem, educational infrastructure, or audio-centric culture that inspires and develops musicians better than others?***
-
-<center>
-<img src="https://github.com/rwmyers46/Anything-British/blob/main/images/EU-Music.jpeg" width="400" height="300"/>
-</center>
-
+>
+<p float="center">
+<img src="https://github.com/rwmyers46/Anything-British/blob/main/images/EU-Music.jpeg" style="center" width="400" height="300"/>
+</p>
+    
 **The Art of Data Science -**
 
 The first major question is how to quantify a subjective concept of "best" in the realm of art. It's tempting to use mathematically convenient numbers from record sales volume, touring revenue, and streams, but these do not account for relative population sizes, marketing budges, native languages, and Spotify market penetration. 
@@ -41,4 +38,36 @@ The first major question is how to quantify a subjective concept of "best" in th
 
 My answer was approached by the following thought experiment: if **Country X** exhibited a tendency towards producing better musicians, then we would observe a correspondingly higher likelihood of listeners from around the globe outside **Country X** streaming its music. This concept mathematically translates to Bayes' Theorem, and his powerful idea is the tool of choice for cutting through statistical noise. 
 
-----------
+------
+
+<p float='left'>
+    <img src='./images/queen.jpg' width='420' height='300'/>
+    <img src='./images/bowie.jpeg' width='420' height='300'/>
+</p>
+
+### Modeling -
+
+Differences notwithstanding, we can all agree on Mozart. This postulate motivates a ***Universal Appeal*** approach to the complex question of which country produces the "greatest" musicians. 
+
+*Universal Appeal* is a metric I've created which assumes the best music transcends borders, connects with listeners more profoundly, and results in a higher relative stream frequency and likelihood of being shared.
+
+The idea for Universal Appeal was driven by the need to simplify, i.e., control for the litany of variables that contribute or diminish a musician's popularity, such as native langauge, country population size, Spotify's relative market penetration, jingoistic tendencies, et cetera. 
+
+Mathematically, Universal Appeal uses a probabilitistic model to represent all variance, theoretically cancelling the aforementioned statistical noise. Conceptually, given the population of all Spotify streams, if `Country X` consistently produces the "best" musicians, then the aggregate likelihood of a listener streaming a `Country X` artist from anywhere in the world will be higher.
+
+Cast in Bayesian terms, the probability of artist, given country, is the probability of country, given artist multiplied by the probability of artist, divided by probability of country to normalize the result:
+
+***\>> P(stream of artist from nation X | listener in country Y) = P(listener in country Y | stream of artist from nation X) * P(stream of artist from nation X) / P(listener in country Y)***
+
+<center><img src='./images/bayes.png' width='350' height='250'/></center>
+
+
+### Analysis & Visualization -
+
+* With the \#1 position in 54 of the 62 countries, the US was by far the global preference for artist origin from 2017-01-01 to 2019-07-01 according to this dataset.
+
+* British and Columbians are second favorites across 24 and 15 countries, respectively.
+
+* A strong preferences exists for local artists.
+
+<a href='https://public.tableau.com/app/profile/russell.w.myers/viz/WhatsintheWater/Dashboard1'> >> Link to Tableau dashboard for this project</a>
